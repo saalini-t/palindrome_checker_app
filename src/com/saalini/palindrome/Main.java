@@ -8,6 +8,7 @@ public class Main {
         UC1_Welcome.showWelcome();
 
         // UC2
+
         UC2_HardcodedPalindrome.checkHardcodedPalindrome();
 
         // UC3
@@ -23,6 +24,7 @@ public class Main {
         UC6_NumericPalindrome.checkQueueStackPalindrome();
 
         // UC7 FINAL
-        UC7_FinalEnhanced.runFinalVersion();
+        UC7_DequeBased.checkDequePalindrome();
+
     }
 }
