@@ -1,6 +1,7 @@
 package com.saalini.palindrome;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class PalindromeCheckerApp {
 
@@ -11,26 +12,25 @@ public class PalindromeCheckerApp {
         System.out.print("Enter word: ");
         String word = sc.nextLine();
 
-        char[] arr = word.toCharArray();
+        Stack<Character> stack = new Stack<>();
 
-        int start = 0;
-        int end = arr.length - 1;
+        for(char c : word.toCharArray()){
+            stack.push(c);
+        }
 
         boolean isPalindrome = true;
 
-        while (start < end) {
-            if (arr[start] != arr[end]) {
+        for(int i=0;i<word.length();i++){
+            if(word.charAt(i) != stack.pop()){
                 isPalindrome = false;
                 break;
             }
-            start++;
-            end--;
         }
 
         if(isPalindrome){
-            System.out.println(word + " is Palindrome (UC4)");
-        } else {
-            System.out.println(word + " is NOT Palindrome (UC4)");
+            System.out.println(word + " is Palindrome (UC5)");
+        }else{
+            System.out.println(word + " is NOT Palindrome (UC5)");
         }
     }
 }
