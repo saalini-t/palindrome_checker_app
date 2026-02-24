@@ -12,5 +12,11 @@ public class Main {
 
         // UC3
         UC3_UserInputPalindrome.checkUserInputPalindrome();
+
+        // UC4
+        UC4_IgnoreCase.checkCharArrayPalindrome();
+
+        // UC5
+        UC5_IgnoreSpaces.checkStackPalindrome();
     }
 }
