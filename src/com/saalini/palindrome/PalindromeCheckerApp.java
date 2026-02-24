@@ -11,27 +11,25 @@ public class PalindromeCheckerApp {
         System.out.print("Enter word: ");
         String word = sc.nextLine();
 
-        Queue<Character> queue = new LinkedList<>();
-        Stack<Character> stack = new Stack<>();
+        Deque<Character> deque = new ArrayDeque<>();
 
         for(char c : word.toCharArray()){
-            queue.add(c);
-            stack.push(c);
+            deque.addLast(c);
         }
 
         boolean isPalindrome = true;
 
-        while(!queue.isEmpty()){
-            if(queue.remove() != stack.pop()){
+        while(deque.size() > 1){
+            if(deque.removeFirst() != deque.removeLast()){
                 isPalindrome = false;
                 break;
             }
         }
 
         if(isPalindrome){
-            System.out.println(word + " is Palindrome (UC6)");
+            System.out.println(word + " is Palindrome (UC7)");
         }else{
-            System.out.println(word + " is NOT Palindrome (UC6)");
+            System.out.println(word + " is NOT Palindrome (UC7)");
         }
     }
 }
