@@ -1,22 +1,36 @@
 package com.saalini.palindrome;
 
+import java.util.Scanner;
+
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        System.out.println("PALINDROME CHECKER APP");
+        Scanner sc = new Scanner(System.in);
 
-        String word = "madam";
-        String reversed = "";
+        System.out.print("Enter word: ");
+        String word = sc.nextLine();
 
-        for(int i = word.length()-1; i >= 0; i--){
-            reversed += word.charAt(i);
+        char[] arr = word.toCharArray();
+
+        int start = 0;
+        int end = arr.length - 1;
+
+        boolean isPalindrome = true;
+
+        while (start < end) {
+            if (arr[start] != arr[end]) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
         }
 
-        if(word.equals(reversed)){
-            System.out.println(word + " is Palindrome");
-        }else{
-            System.out.println(word + " is NOT Palindrome");
+        if(isPalindrome){
+            System.out.println(word + " is Palindrome (UC4)");
+        } else {
+            System.out.println(word + " is NOT Palindrome (UC4)");
         }
     }
 }
