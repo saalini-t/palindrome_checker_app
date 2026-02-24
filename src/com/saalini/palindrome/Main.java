@@ -21,5 +21,8 @@ public class Main {
 
         // UC6
         UC6_NumericPalindrome.checkQueueStackPalindrome();
+
+        // UC7 FINAL
+        UC7_FinalEnhanced.runFinalVersion();
     }
 }
