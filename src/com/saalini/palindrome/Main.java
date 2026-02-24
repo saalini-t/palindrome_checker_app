@@ -18,5 +18,8 @@ public class Main {
 
         // UC5
         UC5_IgnoreSpaces.checkStackPalindrome();
+
+        // UC6
+        UC6_NumericPalindrome.checkQueueStackPalindrome();
     }
 }
